@@ -1,5 +1,5 @@
 # Pre-bootcamp Challenge Preparation
-# BUILD A PRODUCT: StackOverflow-lite -- Frontend
+# BUILD A PRODUCT: StackOverflow-lite (Frontend)
 ## Project Overview
 StackOverflow-lite is a platform where people can ask questions and provide answers. 
 

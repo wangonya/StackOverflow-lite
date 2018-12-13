@@ -56,22 +56,34 @@ body :-ms-input-placeholder {
     height: 100%;
     overflow: hidden;
 }
-.wrapper.form-success .container h1 {
+.wrapper.form-success .auth h1 {
     -webkit-transform: translateY(85px);
     transform: translateY(85px);
 }
-.container {
+.auth {
     max-width: 600px;
     margin: 100px auto;
     padding: 80px 0;
     height: 400px;
     text-align: center;
 }
-.container h1 {
+.auth h1 {
     font-size: 40px;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     font-weight: 200;
+}
+.auth a:link {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+.auth a:hover {
+    font-size: 18px;
+    text-decoration: underline;
+    color: white;
+    font-weight: 300;
 }
 form {
     padding: 20px 0;

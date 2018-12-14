@@ -15,11 +15,13 @@
     margin: 0;
     padding: 0;
     font-weight: 300;
+    flex: 1 100%;
 }
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
     font-weight: 300;
+    display: flex;
+    flex-flow: row wrap;
 }
 body ::-webkit-input-placeholder {
     /* WebKit browsers */
@@ -48,7 +50,14 @@ body :-ms-input-placeholder {
     font-weight: 300;
 }
 
+/* Main */
+.main {
+    padding: 60px;
+}
 /* Login & Signup */
+body .wrapper {
+    color: white;
+}
 .wrapper {
     background: #50a3a2;
     background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
@@ -63,7 +72,6 @@ body :-ms-input-placeholder {
     transform: translateY(85px);
 }
 .auth {
-    max-width: 600px;
     margin: 100px auto;
     padding: 80px 0;
     height: 400px;
@@ -109,6 +117,22 @@ form input {
     color: white;
     transition-duration: 0.25s;
     font-weight: 300;
+}
+form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    padding: 10px 15px;
+    display: block;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+    width: 100%;
 }
 form input:hover {
     background-color: rgba(255, 255, 255, 0.4);
@@ -252,9 +276,7 @@ form button:hover {
 }
 #questions_list ul {
     list-style-type: none;
-    max-width: 900px;
     margin: 0 auto;
-    margin-top: 50px;
     padding: 0 15px;
 }
 #questions_list li {
@@ -330,10 +352,6 @@ path {
     color: #efefef;
 }
 
-.nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
 .nav > #nav-check {
     display: none;
 }
@@ -383,4 +401,63 @@ path {
         height: calc(100vh - 50px);
         overflow-y: auto;
     }
+}
+
+/* Ask Question */
+#ask_q form input {
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    color: grey;
+    text-align: left;
+}
+#ask_q form input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#ask_q form input:focus {
+    width: 100%;
+    color: grey;
+    text-align: left;
+}
+#ask_q form textarea {
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: grey;
+    text-align: left;
+}
+#ask_q form textarea:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#ask_q form textarea:focus {
+    color: grey;
+    text-align: left;
+}
+#ask_q form button {
+    color: white;
+    background-color: #53e3a6;
+}
+#ask_q form button:hover {
+    background-color: #50a3a2;
+}
+/* How to ask */
+.aside {
+    padding: 60px;
+}
+
+
+/*Responsive flex */
+/* Medium screens */
+@media all and (min-width: 600px) {
+    /* We tell both sidebars to share a row */
+    .aside { flex: 1 auto; }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+    /* We invert order of first sidebar and main
+     * And tell the main element to take twice as much width as the other two sidebars
+     */
+    .main { flex: 2 0px; }
+    .main    { order: 1; }
+    .aside { order: 2; }
 }

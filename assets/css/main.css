@@ -443,8 +443,22 @@ path {
 }
 
 /* Answer Comments */
-#q_answers {
-    list-style: none;
+#answers button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    color: white;
+    border: 0;
+    padding: 10px 15px;
+    background-color: #53e3a6;
+    border-radius: 3px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
 .comments-container {
     margin: 60px auto 15px;
@@ -635,6 +649,20 @@ path {
 .comment-box .comment-name.by-author:after {
     content: 'author';
     background: #50a3a2;
+    color: #FFF;
+    font-size: 12px;
+    padding: 3px 5px;
+    font-weight: 700;
+    margin-left: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.comment-box .accepted, .comment-box .comment-name.accepted a {color: #53e3a6;}
+.comment-box .accepted:after {
+    content: 'accepted';
+    background: #53e3a6;
     color: #FFF;
     font-size: 12px;
     padding: 3px 5px;

@@ -284,6 +284,23 @@ form button:hover {
     padding: 20px;
     position: relative;
 }
+#questions_list button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    color: white;
+    border: 0;
+    padding: 10px 15px;
+    background-color: red;
+    border-radius: 3px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    margin-bottom: 20px;
+    float: right;
+}
 .avatar {
     background: #eaeaea;
     border-radius: 4px;
